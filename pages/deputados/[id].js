@@ -3,9 +3,9 @@ import apiDeputados from '@/services/apiDeputados'
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 
-const Detalhes = ({deputados}) => {
+const Detalhes = ({deputado}) => {
   return (
-   <Pagina titulo={deputados.nome}>
+   <Pagina titulo={deputado.nomeCivil}>
     <Row>
         <Col md={3}>
         <Card.Img variant='top' src={'/deputados/'+ item.id}></Card.Img>
@@ -31,20 +31,12 @@ export async function getServerSideProps(context) {
 
     const id = context.params.id
 
-    const res = await apiDeputados.get('/deputados' + id)
-    const deputados = res.data.dados
-    
-    const resNome = await apiDeputados.get('/deputados' + id) 
-    const nome = resNome.data.cast
+    const res = await apiDeputados.get('/deputados/' + id)
+    const deputado = res.data.dados
 
-    const ressiglaPartido = await apiDeputados.get('/deputados' + id)
-    const siglaPartido = ressiglaPartido.data.cast
-
-    const ressiglaUf = await apiDeputados.get('/deputados' + id)
-    const siglaUf = ressiglaUf.data.cast
 
     return {
-        props: {deputados, urlFotos, siglaPartido, siglaUf, nome},
+        props: {deputado},
     }
 }
 

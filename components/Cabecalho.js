@@ -1,31 +1,55 @@
-import Link from 'next/link'
-import React from 'react'
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
 
 const Cabecalho = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="/deputados">ApiDeputados</Navbar.Brand>
-          <Nav className="me-auto">
-            <NavDropdown title="Deputados" id="basic-nav-dropdown">
-              <Link className='dropdown-item' href="/filmes"></Link>
-              <Link className='dropdown-item' href="/filmes/lancamentos"></Link>
-              <Link className='dropdown-item' href="/filmes/cartaz"></Link>
-              <Link className='dropdown-item' href="/filmes/top"></Link>
-            </NavDropdown>
-            <NavDropdown title="Deputados" id="basic-nav-dropdown">
-              <Link className='dropdown-item' href="/series"></Link>
-              <Link className='dropdown-item' href="/series/cartaz"></Link>
-              <Link className='dropdown-item' href="/series/lancamentos"></Link>
-              <Link className='dropdown-item' href="/series/top"></Link>
-            </NavDropdown>
-            <Link className='nav-link' href="/atores"></Link>
-            <Link className='nav-link' href="/generos"></Link>
+      <Navbar bg="warning" expand="lg">
+        
+      <Container fluid>
+        <Navbar.Brand href="#">
+        <img
+              src=''
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt=""
+            />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">Despesas</Nav.Link>
+            <Nav.Link href='#action3'>vjdkrugil</Nav.Link>
+            <Nav.Link href="#">
+              Deputados
+            </Nav.Link>
           </Nav>
-        </Container>
-      </Navbar>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  
+
     </>
   )
 }

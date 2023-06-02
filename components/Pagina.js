@@ -9,8 +9,9 @@ const Pagina = (props) => {
     return (
         <>
             <Cabecalho />
-            <div className='bg-secondary text-white py-3 text-center mb-3'>
-                <h1>{props.titulo}</h1>
+            <div className='bg-warning text-muted py-1 text-center mb-3 border border-dark'>
+           
+            <h1>{props.titulo}</h1>
             </div>
             
             <Container className='mb-5'>
