@@ -8,19 +8,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 const Cabecalho = () => {
+
+
+
   return (
     <>
       <Navbar bg="warning" expand="lg">
         
       <Container fluid>
         <Navbar.Brand href="#">
-        <img
-              src=''
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt=""
-            />
+        <img src={'https://www.camara.leg.br/midias/image/2022/03/marca-camara-filete-preto.png'} alt="Logo" style={{ height: '30px', width: 'auto', marginTop: '10px', marginBottom: '10px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -30,8 +27,8 @@ const Cabecalho = () => {
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Despesas</Nav.Link>
-            <Nav.Link href='#action3'>vjdkrugil</Nav.Link>
+            <Nav.Link href="#action2"></Nav.Link>
+            <Nav.Link href='#action3'></Nav.Link>
             <Nav.Link href="#">
               Deputados
             </Nav.Link>
