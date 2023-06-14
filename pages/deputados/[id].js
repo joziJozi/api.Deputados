@@ -8,9 +8,10 @@ const Detalhes = ({deputado}) => {
    <Pagina titulo={deputado.nomeCivil}>
     <Row>
         <Col md={3}>
-        <Card.Img src={deputado.ultimoStatus.urlFoto} />
+        <Card.Img  src={deputado.ultimoStatus.urlFoto} />
       
         </Col>
+        
         <Col md={9}>
                     <p><strong>Nome: {deputado.nomeCivil}</strong></p>
                     <p><strong>CPF: {deputado.cpf}</strong></p>
@@ -22,6 +23,7 @@ const Detalhes = ({deputado}) => {
                     <p><strong>Situação: {deputado.ultimoStatus.situacao}</strong></p>
         </Col>
     </Row>
+      
     <Row md={2}>
     <Accordion eventKey="0" className='pt-5 '>
       <Accordion.Item eventKey="0" >

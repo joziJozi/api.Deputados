@@ -3,9 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
-
 
 const Cabecalho = () => {
 
@@ -17,7 +14,7 @@ const Cabecalho = () => {
         
       <Container fluid>
         <Navbar.Brand href="#">
-        <img src={'https://www.camara.leg.br/midias/image/2022/03/marca-camara-filete-preto.png'} alt="Logo" style={{ height: '30px', width: 'auto', marginTop: '10px', marginBottom: '10px' }} />
+        <img src={'https://www.camara.leg.br/midias/image/2022/03/marca-camara-filete-preto.png'} alt="image.logo.png" style={{ height: '30px', width: 'auto', marginTop: '10px', marginBottom: '10px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -26,10 +23,14 @@ const Cabecalho = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2"></Nav.Link>
-            <Nav.Link href='#action3'></Nav.Link>
-            <Nav.Link href="#">
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/noticias">
+              Notícias
+            </Nav.Link>
+            <Nav.Link href='/partidos'>
+              Partidos
+            </Nav.Link>
+            <Nav.Link href="/deputados">
               Deputados
             </Nav.Link>
           </Nav>
