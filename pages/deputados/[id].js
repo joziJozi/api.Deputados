@@ -13,11 +13,6 @@ const Detalhes = ({ deputado, despesas }) => {
       `R$${item.valorDocumento}`,
     ]);
 
-    const ws = XLSX.utils.aoa_to_sheet([
-      ['Data', 'Descrição', 'Valor'],
-      ...despesasData,
-      
-    ]);
   }
   return (
 
