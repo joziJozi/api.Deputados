@@ -12,6 +12,12 @@ const Detalhes = ({ deputado, despesas }) => {
       item.tipoDespesa,
       `R$${item.valorDocumento}`,
     ]);
+
+    const ws = XLSX.utils.aoa_to_sheet([
+      ['Data', 'Descrição', 'Valor'],
+      ...despesasData,
+      
+    ]);
   }
   return (
 
@@ -20,7 +26,7 @@ const Detalhes = ({ deputado, despesas }) => {
       <Row>
 
         <Col md={3}>
-          <Card border="success" style={{ width: '18rem' }}>
+          <Card border="success" style={{ width: '16rem' }}>
             <Card.Header className=' bg-success'></Card.Header>
             <Card.Img variant="top" src={deputado.ultimoStatus.urlFoto} />
 
@@ -29,7 +35,7 @@ const Detalhes = ({ deputado, despesas }) => {
         </Col>
 
         <Col md={9}> 
-          <Card border="success" style={{ width: '60rem' }}>
+          <Card border="success" style={{ width: '50rem' }}>
           <Card.Header className=' bg-success'></Card.Header>
           <Container>
             <p><strong>Nome: {deputado.nomeCivil}</strong></p>

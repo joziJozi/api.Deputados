@@ -44,6 +44,7 @@ import { Card, Col, Dropdown, Form, Row } from 'react-bootstrap'
   
     return (
       <Pagina titulo='Deputados'>
+
       <Form className="d-flex">
         <Form.Control
           type="search"
@@ -95,7 +96,7 @@ import { Card, Col, Dropdown, Form, Row } from 'react-bootstrap'
         
            <Row md={4} xs={1} className="g-4">
     
-               {deputados.map(item => (
+               {filteredDeputados.map(item => (
                   <Col>
                       <Card>
                          <Card.Img variant="top" src={item.urlFoto}></Card.Img>
